@@ -1,0 +1,43 @@
+{
+    "name": "UniFi Network Server (VM)",
+    "slug": "unifi-vm",
+    "categories": [
+        11
+    ],
+    "date_created": "2024-11-12",
+    "type": "vm",
+    "updateable": false,
+    "privileged": false,
+    "interface_port": "8443",
+    "documentation": null,
+    "website": "https://www.ui.com/",
+    "logo": "https://raw.githubusercontent.com/loganmarchione/homelab-svg-assets/main/assets/ubiquiti.svg",
+    "description": "UniFi Network Server VM is designed to manage and monitor UniFi networks (Wi-Fi, Ethernet, etc.) on a Debian 12 virtual machine. This VM configuration provides all necessary resources and setup details to support an efficient UniFi Network deployment.",
+    "install_methods": [
+        {
+            "type": "default",
+            "script": "vm/unifi_vm.sh",
+            "resources": {
+                "cpu": "2",
+                "ram": "2048",
+                "hdd": "20",
+                "os": "debian",
+                "version": "12"
+            }
+        }
+    ],
+    "default_credentials": {
+        "username": null,
+        "password": null
+    },
+    "notes": [
+        {
+            "text": "If AVX instruction set is not supported, the VM version is recommended.",
+            "type": "info"
+        },
+        {
+            "text": "This script requires Proxmox VE version 7.0 or later.",
+            "type": "warning"
+        }
+    ]
+}

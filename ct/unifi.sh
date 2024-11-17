@@ -35,17 +35,31 @@ function run_avx_check {
 function handle_avx_alternatives {
   echo "Choose an alternative installation method:"
   echo "1) Install MongoDB 4.2 on LXC container"
-  echo "2) Install UniFi on Debian 12 VM (Coming Soon!)"
-  read -p "Enter your choice (1): " alt_choice
+  echo "2) Install the latest UniFi version on a Debian 12 VM"
+  read -p "Enter your choice (1 or 2): " alt_choice
   if [[ "$alt_choice" == "1" ]]; then
     echo "Proceeding with MongoDB 4.2 installation on LXC..."
     # Set a flag for the installer script
     export MONGO_VERSION="4.2"
+  elif [[ "$alt_choice" == "2" ]]; then
+    setup_unifi_vm
   else
-    echo "Invalid choice. Only option 1 is currently available."
-    echo "VM installation option coming soon!"
+    echo "Invalid choice. Exiting."
     exit 1
   fi
+}
+
+function setup_unifi_vm {
+  # Check if unifi-vm.sh exists before downloading
+  if [ ! -f "unifi-vm.sh" ]; then
+    echo "Downloading unifi-vm.sh..."
+    wget -qO unifi-vm.sh "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/vm/unifi-vm.sh"
+  else
+    echo "unifi-vm.sh already exists. Skipping download."
+  fi
+  # Run unifi_vm.sh to start the VM setup
+  bash unifi-vm.sh
+  exit 0
 }
 
 header_info
