@@ -70,7 +70,7 @@ function process_files {
   local new_repo="$USERNAME/$REPO/refs/heads/$BRANCH"
 
   echo -e "${BL}Searching for files to process...${CL}"
-    find . -type f -not -path '*/.*' | while read -r file; do
+    find . \( -path "*/.*" -prune \) -o -type f ! -name "*.md" ! -name "*.log" -print| while read -r file; do
     echo -e "${BL}[Info] Processing file: $file${CL}"
     while IFS= read -r line; do
       if [[ $line =~ https://github\.com/$old_repo/raw/main ]]; then
