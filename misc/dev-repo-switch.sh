@@ -17,34 +17,92 @@ BL="\033[36m"
 RD="\033[01;31m"
 GN="\033[1;92m"
 CL="\033[m"
-LOG_FILE=".url_conversion_log"
+LOG_FILE=".url_conversion_log.json"
+
+function check_install_jq() {
+    if ! command -v jq &> /dev/null; then
+        echo -e "${BL}jq is not installed. Installing it now...${CL}"
+        if command -v apt-get &> /dev/null; then
+            apt-get update && apt-get install -y jq
+        elif command -v yum &> /dev/null; then
+            yum install -y jq
+        elif command -v dnf &> /dev/null; then
+            dnf install -y jq
+        else
+            echo -e "${RD}Unable to install jq. Please install it manually and run this script again.${CL}"
+            exit 1
+        fi
+        echo -e "${GN}jq has been installed successfully.${CL}"
+    else
+        echo -e "${GN}jq is already installed.${CL}"
+    fi
+}
 
 function log_original_format() {
     local file=$1
-    echo -e "${BL}Recording original URL format for $file${CL}"
-    sed -i "\#^$file:#d" "$LOG_FILE" 2>/dev/null || true
+    local temp_json=""
     
-    if grep -q "https://github.com.*raw/main" "$file"; then
-        echo "$file:github_raw" >> "$LOG_FILE"
-    elif grep -q "https://raw.githubusercontent.com" "$file"; then
-        echo "$file:githubusercontent" >> "$LOG_FILE"
-    else
-        echo "$file:standard" >> "$LOG_FILE"
+    # Create new JSON entry if log file doesn't exist
+    if [ ! -f "$LOG_FILE" ]; then
+        echo '{"files":{}}' > "$LOG_FILE"
     fi
+
+    # Initialize array for URLs in this file
+    urls_array="[]"
+    
+    # Find and process each URL in the file
+    while IFS= read -r line; do
+        if [[ $line =~ https://github\.com/.*/raw/main ]]; then
+        original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
+        # First change the domain and remove 'raw/'
+        converted_url=$(echo "$original_url" | sed "s#github.com/$OLD_REPO/raw/#raw.githubusercontent.com/$NEW_REPO/#")
+        url_entry=$(jq -n \
+            --arg orig "$original_url" \
+            --arg conv "$converted_url" \
+            '{original: $orig, converted: $conv, type: "github_raw"}')
+        urls_array=$(echo "$urls_array" | jq ". + [$url_entry]")
+        elif [[ $line =~ https://raw\.githubusercontent\.com ]]; then
+            original_url=$(echo "$line" | grep -o 'https://raw.githubusercontent.com/[^[:space:]"'\'']*')
+            converted_url=$(echo "$original_url" | sed "s#raw.githubusercontent.com/$OLD_REPO/#raw.githubusercontent.com/$NEW_REPO/#")
+            url_entry=$(jq -n \
+                --arg orig "$original_url" \
+                --arg conv "$converted_url" \
+                '{original: $orig, converted: $conv, type: "githubusercontent"}')
+            urls_array=$(echo "$urls_array" | jq ". + [$url_entry]")
+        fi
+    done < "$file"
+
+    # Add file entry to JSON log
+    jq --arg file "$file" \
+       --argjson urls "$urls_array" \
+       '.files[$file] = {"urls": $urls}' "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
 }
 
 function get_original_format() {
     local file=$1
     if [ -f "$LOG_FILE" ]; then
-        format=$(grep "^$file:" "$LOG_FILE" | cut -d: -f2)
-        if [ -n "$format" ]; then
-            echo "$format"
-        else
-            echo "unknown"
+        # Get URLs array for the file
+        urls=$(jq -r --arg file "$file" '.files[$file].urls[]' "$LOG_FILE")
+        if [ -n "$urls" ]; then
+            while IFS= read -r url_entry; do
+                original_url=$(echo "$url_entry" | jq -r '.original')
+                converted_url=$(echo "$url_entry" | jq -r '.converted')
+                url_type=$(echo "$url_entry" | jq -r '.type')
+                
+                # Convert back based on type
+                case $url_type in
+                    "github_raw")
+                        sed -i "s#$converted_url#$original_url#g" "$file"
+                        ;;
+                    "githubusercontent")
+                        sed -i "s#$converted_url#$original_url#g" "$file"
+                        ;;
+                esac
+            done <<< "$urls"
+            return 0
         fi
-    else
-        echo "unknown"
     fi
+    return 1
 }
 
 header_info
@@ -67,9 +125,14 @@ if [ "$DIRECTION" = "1" ]; then
     echo -e "\n${GN}Enter your testing repository path:${CL}"
     read -r NEW_REPO
 elif [ "$DIRECTION" = "2" ]; then
-    echo -e "\n${GN}Enter your current testing repository path:${CL}"
-    read -r OLD_REPO
+    if [ ! -f "$LOG_FILE" ]; then
+        echo -e "${RD}No conversion log found. Are you sure you're in test mode?${CL}"
+        exit 1
+    fi
+    # Get current repo from any file that was converted
+    OLD_REPO=$(grep -l "raw.githubusercontent.com" . -r | head -n1 | xargs grep -o "[^/]*/[^/]*/[^/]*/[^/]*" | head -n1)
     NEW_REPO="community-scripts/ProxmoxVE/main"
+    echo -e "${BL}Detected current test repository: ${GN}$OLD_REPO${CL}"
 else
     echo -e "${RD}Invalid choice. Exiting.${CL}"
     exit 1
@@ -92,6 +155,8 @@ fi
 
 # Find and update files
 header_info
+# Check and install jq if necessary
+check_install_jq
 echo -e "${BL}Searching for files containing repository URLs...${CL}\n"
 AFFECTED_FILES=$(find . -type f -not -path "*/\.*" -exec grep -l "$OLD_REPO" {} \;)
 
@@ -138,6 +203,7 @@ for file in $AFFECTED_FILES; do
         echo -e "${RD}[Error]${CL} $file could not be updated properly${CL}"
     fi
 done
+
 
 header_info
 echo -e "${GN}The process is complete. Repository URLs have been switched to $NEW_REPO${CL}"
