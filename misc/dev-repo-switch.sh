@@ -8,10 +8,12 @@ function header_info {
   \__ \ | /| / / / __/ ___/ __ \    __/ /   / / / / _ \ | / /
  ___/ / |/ |/ / / /_/ /__/ / / /   / __/   / /_/ /  __/ |/ / 
 /____/|__/|__/_/\__/\___/_/ /_/   /____/  /_____/\___/|___/  
-                                                                                   
+
+
 EOF
 }
 
+# Variables
 set -eEuo pipefail
 BL="\033[36m"
 RD="\033[01;31m"
@@ -19,6 +21,7 @@ GN="\033[1;92m"
 CL="\033[m"
 LOG_FILE=".url_conversion_log.json"
 
+# Check jq installation
 function check_install_jq() {
     if ! command -v jq &> /dev/null; then
         echo -e "${BL}jq is not installed. Installing it now...${CL}"
@@ -29,185 +32,128 @@ function check_install_jq() {
         elif command -v dnf &> /dev/null; then
             dnf install -y jq
         else
-            echo -e "${RD}Unable to install jq. Please install it manually and run this script again.${CL}"
+            echo -e "${RD}Unable to install jq. Please install it manually.${CL}"
             exit 1
         fi
-        echo -e "${GN}jq has been installed successfully.${CL}"
-    else
-        echo -e "${GN}jq is already installed.${CL}"
     fi
 }
 
-function log_original_format() {
-    local file=$1
-    local temp_json=""
-    
-    # Create new JSON entry if log file doesn't exist
-    if [ ! -f "$LOG_FILE" ]; then
-        echo '{"files":{}}' > "$LOG_FILE"
-    fi
+# Log initialization
+function initialize_log {
+  if [ ! -f "$LOG_FILE" ]; then
+    echo '{"files":{}}' > "$LOG_FILE"
+  fi
+}
 
-    # Initialize array for URLs in this file
-    urls_array="[]"
-    
-    # Find and process each URL in the file
+# Logging changes
+function log_changes {
+  local file="$1"
+  local original_url="$2"
+  local converted_url="$3"
+
+  initialize_log
+  local current_log
+  current_log=$(jq '.' "$LOG_FILE")
+
+  updated_log=$(echo "$current_log" | jq \
+    --arg file "$file" \
+    --arg orig "$original_url" \
+    --arg conv "$converted_url" \
+    '.files[$file].urls += [{"original": $orig, "converted": $conv}]')
+
+  echo "$updated_log" > "$LOG_FILE"
+}
+
+# Transform URLs
+function process_files {
+  local old_repo="community-scripts/ProxmoxVE"
+  local new_repo="$USERNAME/$REPO/refs/heads/$BRANCH"
+
+  echo -e "${BL}Searching for files to process...${CL}"
+  find . -type f -name "*.sh" | while read -r file; do
+    echo -e "${BL}[Info] Processing file: $file${CL}"
     while IFS= read -r line; do
-        if [[ $line =~ https://github\.com/.*/raw/main ]]; then
+      if [[ $line =~ https://github\.com/$old_repo/raw/main ]]; then
+        # Transform github.com URLs with /raw/
         original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
-        # First change the domain and remove 'raw/'
-        converted_url=$(echo "$original_url" | sed "s#github.com/$OLD_REPO/raw/#raw.githubusercontent.com/$NEW_REPO/#")
-        url_entry=$(jq -n \
-            --arg orig "$original_url" \
-            --arg conv "$converted_url" \
-            '{original: $orig, converted: $conv, type: "github_raw"}')
-        urls_array=$(echo "$urls_array" | jq ". + [$url_entry]")
-        elif [[ $line =~ https://raw\.githubusercontent\.com ]]; then
-            original_url=$(echo "$line" | grep -o 'https://raw.githubusercontent.com/[^[:space:]"'\'']*')
-            converted_url=$(echo "$original_url" | sed "s#raw.githubusercontent.com/$OLD_REPO/#raw.githubusercontent.com/$NEW_REPO/#")
-            url_entry=$(jq -n \
-                --arg orig "$original_url" \
-                --arg conv "$converted_url" \
-                '{original: $orig, converted: $conv, type: "githubusercontent"}')
-            urls_array=$(echo "$urls_array" | jq ". + [$url_entry]")
-        fi
+        converted_url=$(echo "$original_url" | sed "s#github.com/$old_repo/raw/#raw.githubusercontent.com/$new_repo/#")
+        # Escape special characters for sed
+        escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        sed -i "s#$escaped_original#$escaped_converted#g" "$file"
+        log_changes "$file" "$original_url" "$converted_url"
+      elif [[ $line =~ https://raw\.githubusercontent\.com/$old_repo/main ]]; then
+        # Transform raw.githubusercontent.com URLs
+        original_url=$(echo "$line" | grep -o 'https://raw.githubusercontent.com/[^[:space:]"'\'']*')
+        converted_url=$(echo "$original_url" | sed "s#raw.githubusercontent.com/$old_repo/#raw.githubusercontent.com/$new_repo/#")
+        # Escape special characters for sed
+        escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        sed -i "s#$escaped_original#$escaped_converted#g" "$file"
+        log_changes "$file" "$original_url" "$converted_url"
+      elif [[ $line =~ https://github\.com/$old_repo/blob/main ]]; then
+        # Transform github.com URLs without /raw/
+        original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
+        converted_url=$(echo "$original_url" | sed "s#github.com/$old_repo/blob/main#github.com/$new_repo/blob/$BRANCH#")
+        # Escape special characters for sed
+        escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        sed -i "s#$escaped_original#$escaped_converted#g" "$file"
+        log_changes "$file" "$original_url" "$converted_url"
+      fi
     done < "$file"
-
-    # Add file entry to JSON log
-    jq --arg file "$file" \
-       --argjson urls "$urls_array" \
-       '.files[$file] = {"urls": $urls}' "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
+    echo -e "${GN}[Success] Processed: $file${CL}"
+  done
 }
 
-function get_original_format() {
-    local file=$1
-    if [ -f "$LOG_FILE" ]; then
-        # Get URLs array for the file
-        urls=$(jq -r --arg file "$file" '.files[$file].urls[]' "$LOG_FILE")
-        if [ -n "$urls" ]; then
-            while IFS= read -r url_entry; do
-                original_url=$(echo "$url_entry" | jq -r '.original')
-                converted_url=$(echo "$url_entry" | jq -r '.converted')
-                url_type=$(echo "$url_entry" | jq -r '.type')
-                
-                # Convert back based on type
-                case $url_type in
-                    "github_raw")
-                        sed -i "s#$converted_url#$original_url#g" "$file"
-                        ;;
-                    "githubusercontent")
-                        sed -i "s#$converted_url#$original_url#g" "$file"
-                        ;;
-                esac
-            done <<< "$urls"
-            return 0
-        fi
+# Revert changes
+function revert_changes {
+  if [ ! -f "$LOG_FILE" ]; then
+    echo -e "${RD}No log file found. Cannot revert changes.${CL}"
+    exit 1
+  fi
+
+  jq -r '.files | to_entries[] | "\(.key) \(.value.urls[] | .original) \(.value.urls[] | .converted)"' "$LOG_FILE" | while read -r file original_url converted_url; do
+    if [ -f "$file" ]; then
+      sed -i "s#$converted_url#$original_url#g" "$file"
     fi
-    return 1
+  done
+  echo -e "${GN}Reverted all changes based on the log file.${CL}"
 }
 
+# Main Script
 header_info
-echo "Loading..."
+check_install_jq
 
-# Prompt for direction
-echo -e "\n${BL}Choose direction:${CL}"
-echo -e "1) Switch to testing branch"
-echo -e "2) Switch back to community repository"
-read -r DIRECTION
+# Get user input
+read -rp "Enter your GitHub username (e.g., ColinOppenheim): " USERNAME
+read -rp "Enter your GitHub repository name (e.g., ProxmoxVE): " REPO
+read -rp "Enter the branch name (e.g., Unifi-VM): " BRANCH
 
-if [ "$DIRECTION" = "1" ]; then
-    OLD_REPO="community-scripts/ProxmoxVE/main"
-    echo -e "\n${BL}To find your testing repository path:${CL}"
-    echo -e "1. Go to any file in your fork on the branch you want to test"
-    echo -e "2. Click the 'Raw' button"
-    echo -e "3. From the URL, copy everything after 'githubusercontent.com/' up to (but not including) the first '/' after the branch name"
-    echo -e "Example URL: https://raw.githubusercontent.com/UserName/ProxmoxVE/refs/heads/branch/folder/file.sh"
-    echo -e "You would copy: ${GN}UserName/ProxmoxVE/refs/heads/branch${CL}"
-    echo -e "\n${GN}Enter your testing repository path:${CL}"
-    read -r NEW_REPO
-elif [ "$DIRECTION" = "2" ]; then
-    if [ ! -f "$LOG_FILE" ]; then
-        echo -e "${RD}No conversion log found. Are you sure you're in test mode?${CL}"
-        exit 1
-    fi
-    # Get current repo from any file that was converted
-    OLD_REPO=$(grep -l "raw.githubusercontent.com" . -r | head -n1 | xargs grep -o "[^/]*/[^/]*/[^/]*/[^/]*" | head -n1)
-    NEW_REPO="community-scripts/ProxmoxVE/main"
-    echo -e "${BL}Detected current test repository: ${GN}$OLD_REPO${CL}"
-else
+# Validate inputs
+if [[ -z "$USERNAME" || -z "$REPO" || -z "$BRANCH" ]]; then
+  echo -e "${RD}Error: All inputs are required.${CL}"
+  exit 1
+fi
+
+# Main Menu
+echo -e "\n${BL}What would you like to do?${CL}"
+echo "1) Transform URLs to the testing repository"
+echo "2) Revert URLs to the original repository"
+read -rp "Enter your choice (1 or 2): " choice
+
+case $choice in
+  1)
+    echo -e "${BL}Transforming URLs to the testing repository...${CL}"
+    process_files
+    echo -e "${GN}Transformation complete. Changes logged to $LOG_FILE.${CL}"
+    ;;
+  2)
+    echo -e "${BL}Reverting URLs to the original repository...${CL}"
+    revert_changes
+    ;;
+  *)
     echo -e "${RD}Invalid choice. Exiting.${CL}"
     exit 1
-fi
-
-# Validate input
-if [ -z "$NEW_REPO" ]; then
-    echo -e "${RD}[Error] No repository provided. Exiting.${CL}"
-    exit 1
-fi
-
-# Confirm with user
-echo -e "\n${BL}You are about to change repository URLs from ${RD}$OLD_REPO${BL} to ${GN}$NEW_REPO${CL}"
-echo -e "Are you sure you want to continue? (y/n)"
-read -r CONFIRM
-if [[ ! $CONFIRM =~ ^[Yy]$ ]]; then
-    echo -e "${RD}Operation cancelled by user.${CL}"
-    exit 1
-fi
-
-# Find and update files
-header_info
-# Check and install jq if necessary
-check_install_jq
-echo -e "${BL}Searching for files containing repository URLs...${CL}\n"
-AFFECTED_FILES=$(find . -type f -not -path "*/\.*" -exec grep -l "$OLD_REPO" {} \;)
-
-if [ -z "$AFFECTED_FILES" ]; then
-    echo -e "${RD}No files found containing repository URLs.${CL}"
-    exit 0
-fi
-
-echo -e "${GN}Files to be updated:${CL}"
-echo "$AFFECTED_FILES"
-echo
-
-# Update files
-for file in $AFFECTED_FILES; do
-    echo -e "${BL}[Info]${GN} Processing $file${CL}"
-    
-    if [ "$DIRECTION" = "1" ]; then
-        # Log original format before making changes
-        log_original_format "$file"
-        
-        # Convert all formats to raw.githubusercontent.com
-        sed -i "s#https://github.com/$OLD_REPO/#https://raw.githubusercontent.com/$NEW_REPO/#g" "$file"
-        sed -i "s#https://raw.githubusercontent.com/$OLD_REPO/#https://raw.githubusercontent.com/$NEW_REPO/#g" "$file"
-        sed -i "s#$OLD_REPO/#$NEW_REPO/#g" "$file"
-    else
-        # Converting back to original format
-        format=$(get_original_format "$file")
-        case $format in
-            "github_raw")
-                sed -i "s#https://raw.githubusercontent.com/$OLD_REPO/#https://github.com/$NEW_REPO/raw/#g" "$file"
-                ;;
-            "githubusercontent")
-                sed -i "s#https://raw.githubusercontent.com/$OLD_REPO/#https://raw.githubusercontent.com/$NEW_REPO/#g" "$file"
-                ;;
-            *)
-                sed -i "s#$OLD_REPO/#$NEW_REPO/#g" "$file"
-                ;;
-        esac
-    fi
-    
-    if grep -q "$NEW_REPO" "$file"; then
-        echo -e "${GN}[Success]${CL} $file updated${CL}"
-    else
-        echo -e "${RD}[Error]${CL} $file could not be updated properly${CL}"
-    fi
-done
-
-
-header_info
-echo -e "${GN}The process is complete. Repository URLs have been switched to $NEW_REPO${CL}"
-if [ "$DIRECTION" = "1" ]; then
-    echo -e "${BL}Original URL formats have been logged to $LOG_FILE${CL}"
-fi
-echo -e "${BL}To revert changes, run this script again and choose the opposite direction.${CL}\n"
+    ;;
+esac
