@@ -109,7 +109,7 @@ function process_files {
 
 
 
-function revert_changes {
+function revert_changes { 
   if [ ! -f "$LOG_FILE" ]; then
     echo -e "${RD}[Error] No log file found. Cannot revert changes.${CL}"
     exit 1
@@ -136,7 +136,12 @@ function revert_changes {
       if [ $? -eq 0 ]; then
         echo -e "${GN}[Success] Reverted: $file${CL}"
         # Safely remove the reverted file entry from the temp log
-        jq "del(.files[\"$file\"].urls[] | select(.converted == \"$converted_url\"))" "$temp_log" > "${temp_log}.tmp" && mv "${temp_log}.tmp" "$temp_log"
+        jq "del(.files[\"$file\"].urls[] | select(.converted == \"$converted_url\"))" "$temp_log" > "${temp_log}.tmp"
+        if [ $? -eq 0 ]; then
+          mv "${temp_log}.tmp" "$temp_log"
+        else
+          echo -e "${RD}[Error] Failed to update log for: $file${CL}"
+        fi
       else
         echo -e "${RD}[Error] Failed to revert: $file${CL}"
       fi
@@ -150,6 +155,7 @@ function revert_changes {
 
   echo -e "${GN}Reversion process complete. Log updated.${CL}"
 }
+
 
 
 
