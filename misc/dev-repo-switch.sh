@@ -70,19 +70,19 @@ function process_files {
   local new_repo="$USERNAME/$REPO/refs/heads/$BRANCH"
 
   echo -e "${BL}Searching for files to process...${CL}"
-  find . -type f -name "*.sh" | while read -r file; do
+    find . -type f -not -path '*/.*' | while read -r file; do
     echo -e "${BL}[Info] Processing file: $file${CL}"
     while IFS= read -r line; do
       if [[ $line =~ https://github\.com/$old_repo/raw/main ]]; then
-        # # Transform github.com URLs with /raw/
-        # original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
-        # converted_url=$(echo "$original_url" | sed "s#github.com/$old_repo/raw/main#raw.githubusercontent.com/$new_repo#")
-        # # Escape special characters for sed
-        # escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
-        # escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
-        # sed -i "s#$escaped_original#$escaped_converted#g" "$file"
-        # log_changes "$file" "$original_url" "$converted_url"
-        continue
+        # Transform github.com URLs with /raw/
+        original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
+        converted_url=$(echo "$original_url" | sed "s#github.com/$old_repo/raw/main#raw.githubusercontent.com/$new_repo#")
+        # Escape special characters for sed
+        escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        sed -i "s#$escaped_original#$escaped_converted#g" "$file"
+        log_changes "$file" "$original_url" "$converted_url"
+        # continue
       elif [[ $line =~ https://raw\.githubusercontent\.com/$old_repo/main ]]; then
         # Transform raw.githubusercontent.com URLs
         original_url=$(echo "$line" | grep -o 'https://raw.githubusercontent.com/[^[:space:]"'\'']*')
