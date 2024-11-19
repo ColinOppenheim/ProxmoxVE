@@ -74,15 +74,15 @@ function process_files {
     echo -e "${BL}[Info] Processing file: $file${CL}"
     while IFS= read -r line; do
       if [[ $line =~ https://github\.com/$old_repo/raw/main ]]; then
-        # Transform github.com URLs with /raw/
-        original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
-        converted_url=$(echo "$original_url" | sed "s#github.com/$old_repo/raw/main#raw.githubusercontent.com/$new_repo#")
-        # Escape special characters for sed
-        escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
-        escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
-        sed -i "s#$escaped_original#$escaped_converted#g" "$file"
-        log_changes "$file" "$original_url" "$converted_url"
-        # continue
+        # # Transform github.com URLs with /raw/
+        # original_url=$(echo "$line" | grep -o 'https://github\.com/[^[:space:]"'\'']*')
+        # converted_url=$(echo "$original_url" | sed "s#github.com/$old_repo/raw/main#raw.githubusercontent.com/$new_repo#")
+        # # Escape special characters for sed
+        # escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        # escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        # sed -i "s#$escaped_original#$escaped_converted#g" "$file"
+        # log_changes "$file" "$original_url" "$converted_url"
+        continue
       elif [[ $line =~ https://raw\.githubusercontent\.com/$old_repo/main ]]; then
         # Transform raw.githubusercontent.com URLs
         original_url=$(echo "$line" | grep -o 'https://raw.githubusercontent.com/[^[:space:]"'\'']*')
@@ -107,8 +107,6 @@ function process_files {
   done
 }
 
-
-
 function revert_changes { 
   if [ ! -f "$LOG_FILE" ]; then
     echo -e "${RD}[Error] No log file found. Cannot revert changes.${CL}"
@@ -117,47 +115,47 @@ function revert_changes {
 
   echo -e "${BL}Reverting changes based on the log file: ${LOG_FILE}${CL}"
 
-  # Create a temporary log file for updated entries
+  # Create a temporary log file to track changes
   temp_log=$(mktemp)
-
-  # Start with the current log contents
   jq '.' "$LOG_FILE" > "$temp_log"
 
-  jq -r '.files | to_entries[] | "\(.key) \(.value.urls[] | .original) \(.value.urls[] | .converted)"' "$LOG_FILE" | while read -r file original_url converted_url; do
+  # Process each file's URLs sequentially
+  while IFS= read -r file_entry; do
+    file=$(echo "$file_entry" | jq -r '.key')
     if [ -f "$file" ]; then
       echo -e "${BL}[Info] Reverting changes in file: $file${CL}"
-      
-      # Escape special characters for sed
-      escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
-      escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
-      
-      # Replace converted URL with the original URL
-      sed -i "s#$escaped_converted#$escaped_original#g" "$file"
-      if [ $? -eq 0 ]; then
-        echo -e "${GN}[Success] Reverted: $file${CL}"
-        # Safely remove the reverted file entry from the temp log
-        jq "del(.files[\"$file\"].urls[] | select(.converted == \"$converted_url\"))" "$temp_log" > "${temp_log}.tmp"
+
+      # Extract URLs for this file
+      jq -c ".files[\"$file\"].urls[]" "$temp_log" | while read -r url_entry; do
+        original_url=$(echo "$url_entry" | jq -r '.original')
+        converted_url=$(echo "$url_entry" | jq -r '.converted')
+
+        # Escape URLs for sed
+        escaped_original=$(echo "$original_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+        escaped_converted=$(echo "$converted_url" | sed 's/[&/\]/\\&/g; s/"/\\\"/g')
+
+        echo "Reverting URL in $file: $converted_url -> $original_url"
+
+        # Replace converted URL with original
+        sed -i "s#$escaped_converted#$escaped_original#g" "$file"
         if [ $? -eq 0 ]; then
-          mv "${temp_log}.tmp" "$temp_log"
+          echo -e "${GN}[Success] Reverted URL: $converted_url in $file${CL}"
+          # Remove the processed log entry immediately
+          jq "del(.files[\"$file\"].urls[] | select(.converted == \"$converted_url\" and .original == \"$original_url\"))" "$temp_log" > "${temp_log}.tmp" && mv "${temp_log}.tmp" "$temp_log"
         else
-          echo -e "${RD}[Error] Failed to update log for: $file${CL}"
+          echo -e "${RD}[Error] Failed to revert URL: $converted_url in $file${CL}"
         fi
-      else
-        echo -e "${RD}[Error] Failed to revert: $file${CL}"
-      fi
+      done
     else
       echo -e "${RD}[Error] File not found: $file. Skipping...${CL}"
     fi
-  done
+  done < <(jq -c '.files | to_entries[]' "$temp_log")
 
   # Save the updated log back to the original log file
   mv "$temp_log" "$LOG_FILE"
 
   echo -e "${GN}Reversion process complete. Log updated.${CL}"
 }
-
-
-
 
 
 # Main Script
