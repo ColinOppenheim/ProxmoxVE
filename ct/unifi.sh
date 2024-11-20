@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -s https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
@@ -53,7 +53,7 @@ function setup_unifi_vm {
   # Check if unifi-vm.sh exists before downloading
   if [ ! -f "unifi-vm.sh" ]; then
     echo "Downloading unifi-vm.sh..."
-    wget -qO unifi-vm.sh "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/vm/unifi-vm.sh"
+    wget -qO unifi-vm.sh "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/vm/unifi-vm.sh"
   else
     echo "unifi-vm.sh already exists. Skipping download."
   fi

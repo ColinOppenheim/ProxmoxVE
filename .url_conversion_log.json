@@ -1,0 +1,1788 @@
+{
+  "files": {
+    "./vm/mikrotik-routeros.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/owncloud-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/ubuntu2204-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/haos-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/debian-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/openwrt.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/ubuntu2404-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/nextcloud-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./vm/pimox-haos-vm.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        }
+      ]
+    },
+    "./misc/copy-data/podman-home-assistant-copy-data-home-assistant-container.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/podman-home-assistant-copy-data-home-assistant-container.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/podman-home-assistant-copy-data-home-assistant-container.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/zwavejs2mqtt-copy-data-zwavejsui.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/zwavejs2mqtt-copy-data-zwavejsui.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/zwavejs2mqtt-copy-data-zwavejsui.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/plex-copy-data-plex.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/plex-copy-data-plex.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/plex-copy-data-plex.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/z2m-copy-data-z2m.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/z2m-copy-data-z2m.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/z2m-copy-data-z2m.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/home-assistant-container-copy-data-home-assistant-container.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/home-assistant-container-copy-data-home-assistant-container.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/home-assistant-container-copy-data-home-assistant-container.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/home-assistant-core-copy-data-home-assistant-core.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/home-assistant-core-copy-data-home-assistant-core.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/home-assistant-core-copy-data-home-assistant-core.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/home-assistant-container-copy-data-podman-home-assistant.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/home-assistant-container-copy-data-podman-home-assistant.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/home-assistant-container-copy-data-podman-home-assistant.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/home-assistant-container-copy-data-home-assistant-core.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/home-assistant-container-copy-data-home-assistant-core.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/home-assistant-container-copy-data-home-assistant-core.sh)"
+        }
+      ]
+    },
+    "./misc/copy-data/home-assistant-core-copy-data-home-assistant-container.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/copy-data/home-assistant-core-copy-data-home-assistant-container.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/copy-data/home-assistant-core-copy-data-home-assistant-container.sh)"
+        }
+      ]
+    },
+    "./misc/build.func": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/alpine-install.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/alpine-install.func)"
+        },
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/install.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/install.func)"
+        },
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/create_lxc.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/ct/create_lxc.sh)"
+        },
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/$var_install.sh)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/install/$var_install.sh)"
+        },
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/images/logo-81x112.png"
+        },
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE",
+          "converted": "https://github.com/community-scripts/ProxmoxVE"
+        },
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions"
+        },
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/issues",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/issues"
+        }
+      ]
+    },
+    "./json/omv.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions/175`",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions/175`"
+        }
+      ]
+    },
+    "./json/scaling-governor.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/cpu.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/cpu.png?raw=true"
+        }
+      ]
+    },
+    "./json/keycloak.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions/193",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions/193"
+        }
+      ]
+    },
+    "./json/mariadb.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions/192",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions/192"
+        }
+      ]
+    },
+    "./json/photoprism.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/photoprism.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/photoprism.png?raw=true"
+        }
+      ]
+    },
+    "./json/linkwarden.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions/305`",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions/305`"
+        }
+      ]
+    },
+    "./json/openobserve.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/openobsecure.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/openobsecure.png?raw=true"
+        }
+      ]
+    },
+    "./json/monitor-all.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/monitor.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/monitor.png?raw=true"
+        }
+      ]
+    },
+    "./json/nextcloud-vm.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions/144`",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions/144`"
+        }
+      ]
+    },
+    "./json/owncloud-vm.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/discussions/144`",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/discussions/144`"
+        }
+      ]
+    },
+    "./json/pimox-haos-vm.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/pimox.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/pimox.png?raw=true"
+        }
+      ]
+    },
+    "./json/filebrowser.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/filebrowser.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/filebrowser.png?raw=true"
+        }
+      ]
+    },
+    "./json/nocodb.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/nocodb.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/nocodb.png?raw=true"
+        }
+      ]
+    },
+    "./json/whoogle.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/whoogle.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/whoogle.png?raw=true"
+        }
+      ]
+    },
+    "./json/heimdall-dashboard.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/heimdall.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/heimdall.png?raw=true"
+        }
+      ]
+    },
+    "./json/microcode.json": {
+      "urls": [
+        {
+          "original": "https://github.com/community-scripts/ProxmoxVE/blob/main/misc/images/processor.png?raw=true",
+          "converted": "https://github.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/blob/main/misc/images/processor.png?raw=true"
+        }
+      ]
+    },
+    "./ct/pingvin.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/apache-couchdb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/komga.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/kavita.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/lldap.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/zabbix.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/spoolman.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/gotify.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/tianji.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/prometheus.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/kubo.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/casaos.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/vaultwarden.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/alpine-grafana.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/pialert.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/gitea.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/ollama.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/podman-homeassistant.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/hyperhdr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/sonarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/overseerr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/cockpit.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/apache-cassandra.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/emby.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homeassistant.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/jellyseerr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/influxdb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/tasmoadmin.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/uptimekuma.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/openwebui.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/headscale.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/adventurelog.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/channels.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/linkwarden.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/readeck.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/cronicle.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/flowiseai.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/dashy.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/matterbridge.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/omada.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/nextcloudpi.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/ombi.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/plex.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/keycloak.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/shinobi.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/umbrel.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/mediamtx.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/lidarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/tdarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/trilium.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/pbs.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/nzbget.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/ubuntu.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/debian.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/deluge.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/vikunja.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/frigate.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/aria2.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homepage.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/recyclarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/mysql.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/alpine.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/heimdall-dashboard.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homebox.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/technitiumdns.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/umami.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/hyperion.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/notifiarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/jackett.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/qbittorrent.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/lazylibrarian.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/whoogle.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/pairdrop.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/tandoor.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/owncast.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/fenrus.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/pocketbase.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/nginxproxymanager.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/zipline.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/grafana.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/adguard.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/traefik.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/deconz.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/medusa.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/syncthing.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/prowlarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/ntfy.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/dockge.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/metube.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/motioneye.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/stirling-pdf.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/wikijs.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/meshcentral.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/tautulli.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/emqx.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/wavelog.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/node-red.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/pihole.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/transmission.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homebridge.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/rtsptoweb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/hivemq.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/cloudflared.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/yunohost.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/runtipi.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/mafl.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/rabbitmq.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/smokeping.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/gokapi.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/podman.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/radarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homer.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/peanut.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/openhab.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/openobserve.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/esphome.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/agentdvr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/alpine-nextcloud.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/omv.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/bunkerweb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/wallos.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/petio.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/autobrr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/changedetection.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/archivebox.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/mongodb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/alpine-vaultwarden.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/docker.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/readarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/unmanic.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/redis.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/iobroker.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/octoprint.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/unifi.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        },
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/vm/unifi-vm.sh",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/vm/unifi-vm.sh"
+        }
+      ]
+    },
+    "./ct/jellyfin.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/commafeed.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/iventoy.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/magicmirror.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/flaresolverr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/bookstack.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/homeassistant-core.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/netbox.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/apt-cacher-ng.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/photoprism.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/rdtclient.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/neo4j.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/sabnzbd.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/zigbee2mqtt.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/memos.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/mariadb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/blocky.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/caddy.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/forgejo.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/nocodb.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/navidrome.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/actualbudget.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/mqtt.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/alpine-docker.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/calibre-web.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/alpine-zigbee2mqtt.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/watchyourlan.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/grocy.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/n8n.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/zwave-js-ui.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/traccar.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/fhem.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/zoraxy.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/paperless-ngx.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/wireguard.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/postgresql.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/rockylinux.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/whisparr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/wastebin.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/evcc.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/ersatztv.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/scrypted.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/audiobookshelf.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/daemonsync.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/sftpgo.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/threadfin.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/myspeed.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/bazarr.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    },
+    "./ct/go2rtc.sh": {
+      "urls": [
+        {
+          "original": "https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)",
+          "converted": "https://raw.githubusercontent.com/ColinOppenheim/ProxmoxVE/refs/heads/Deployment-Testing/misc/build.func)"
+        }
+      ]
+    }
+  }
+}
